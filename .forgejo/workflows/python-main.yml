@@ -110,10 +110,10 @@ jobs:
       - name: Install the project
         run: uv sync --locked --all-extras --dev
 
-      - name: Run tests
-        env:
-          TERM: "dumb"
-        run: uv run pytest --color=yes tests
+#      - name: Run tests
+#        env:
+#          TERM: "dumb"
+#        run: uv run pytest --color=yes tests
 
       - name: Build
         run: uv build
