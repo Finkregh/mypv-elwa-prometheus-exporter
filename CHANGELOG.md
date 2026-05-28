@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.0.2](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/fde2221fe1a45e483db500985475a3a0d0585f94..0.0.2) - 2026-05-28
+#### Miscellaneous Chores
+- bump - ([fde2221](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/fde2221fe1a45e483db500985475a3a0d0585f94)) - Oluf Lorenzen
+
+- - -
+
 ## [0.0.1](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/da91334df9ec33b75ed7fd337b430784845464f0..0.0.1) - 2026-05-28
 #### Continuous Integration
 - fallback version - ([040f3c1](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/040f3c105d2ed63476ba3ee79025c35d6f14b07b)) - Oluf Lorenzen
