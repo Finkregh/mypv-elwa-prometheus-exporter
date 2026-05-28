@@ -185,11 +185,13 @@ jobs:
           registry: ${{ steps.server_domain.outputs.server_domain }}
           username: ${{ github.repository_owner }}
           password: ${{ secrets.PACKAGE_UPLOAD_TOKEN }}
+      - name: debug docker tag
+        run: echo "${{ steps.server_domain.outputs.server_domain }}/${{ github.repository }}:${{ needs.determine_versions.outputs.new }}"
       - name: Build and Push
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
         with:
           context: .
           push: true
-          tags: ${{ steps.server_domain.outputs.server_domain }}/${{ github.repository }}:${{ needs.determine_versions.outputs.new }}
+          tags: "${{ steps.server_domain.outputs.server_domain }}/${{ github.repository }}:${{ needs.determine_versions.outputs.new }}"
           cache-from: type=gha
           cache-to: type=gha,mode=max
