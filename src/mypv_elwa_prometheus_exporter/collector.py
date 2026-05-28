@@ -67,9 +67,7 @@ class MyPVCollector(Collector):
                 yield from self._collect_system_metrics(data, device_info)
                 yield from self._collect_network_metrics(data, device_info)
 
-                log.debug(
-                    f"Successfully collected metrics from device {device_info['instance']}"
-                )
+                log.debug(f"Successfully collected metrics from device {device_info['instance']}")
 
             except Exception as e:
                 log.error(f"Error collecting metrics from device {api.instance}: {e}")

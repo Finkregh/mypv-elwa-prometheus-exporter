@@ -239,19 +239,13 @@ def export(
         output_lines = []
         for metric_family in collector.collect():
             # Add help and type comments
-            output_lines.append(
-                f"# HELP {metric_family.name} {metric_family.documentation}"
-            )
+            output_lines.append(f"# HELP {metric_family.name} {metric_family.documentation}")
             output_lines.append(f"# TYPE {metric_family.name} {metric_family.type}")
 
             # Add metric samples
             for sample in metric_family.samples:
                 if sample.labels:
-                    label_str = (
-                        "{"
-                        + ",".join(f'{k}="{v}"' for k, v in sample.labels.items())
-                        + "}"
-                    )
+                    label_str = "{" + ",".join(f'{k}="{v}"' for k, v in sample.labels.items()) + "}"
                 else:
                     label_str = ""
                 output_lines.append(f"{sample.name}{label_str} {sample.value}")
@@ -275,9 +269,7 @@ def export(
 
 @app.command()
 def test_connection(
-    url: str = typer.Option(
-        ..., "--url", "-u", help="Device URL (e.g., http://192.168.178.125)"
-    ),
+    url: str = typer.Option(..., "--url", "-u", help="Device URL (e.g., http://192.168.178.125)"),
 ) -> None:
     """Test connection to my-PV AC ELWA device.
 

@@ -21,13 +21,13 @@ class MyPVAPI:
     def __init__(
         self,
         base_url: str,
-        timeout: int = 30,
+        timeout: int = 10,
     ) -> None:
         """Initialize the my-PV API client.
 
         :param base_url: The base URL of the device (e.g. http://192.168.1.125).
         :type base_url: str
-        :param timeout: Request timeout in seconds.
+        :param timeout: Request timeout in seconds. Default is 10 seconds.
         :type timeout: int
         """
         self.base_url = self._normalize_url(base_url)
@@ -88,14 +88,17 @@ class MyPVAPI:
         except requests.exceptions.HTTPError:
             log.exception("HTTP Error %s for %s", response.status_code, url)
             raise
+        except requests.exceptions.ConnectTimeout:
+            log.critical("Connection Timeout for %s", url)
+            raise
         except requests.exceptions.Timeout:
-            log.exception("Timeout Error for %s", url)
+            log.critical("Timeout Error for %s", url)
             raise
         except requests.exceptions.RequestException:
-            log.exception("Request Error for %s", url)
+            log.critical("Request Error for %s", url)
             raise
         except json.JSONDecodeError:
-            log.exception("JSON decode error for response from %s", url)
+            log.critical("JSON decode error for response from %s", url)
             raise
 
     def get_data(self) -> dict[str, Any]:
