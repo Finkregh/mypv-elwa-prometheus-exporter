@@ -24,8 +24,8 @@ jobs:
         run: |
           BASH_STATE_BEFORE=$(set +o)
           set -x
-          cog get-version
-          current=$(cog get-version 2>/dev/null)
+          cog get-version || cog get-version --fallback 0.0.1
+          current=$(cog get-version || cog get-version --fallback 0.0.1 2>/dev/null)
 
           # Check if current version matches semver pattern
           if [[ $current =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
