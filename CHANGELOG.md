@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.0.14](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/665a60d6be040f4591100a9f5eeb1952be7bbc3c..0.0.14) - 2026-07-18
+#### Miscellaneous Chores
+- (**deps**) update https://code.forgejo.org/actions/checkout digest to de0fac2 - ([665a60d](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/665a60d6be040f4591100a9f5eeb1952be7bbc3c)) - renovate-forgejo
+
+- - -
+
 ## [0.0.13](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/8a58f8b00c624a7df78b64dd015529c56d8387a9..0.0.13) - 2026-07-17
 #### Miscellaneous Chores
 - (**deps**) update python:3.13-slim docker digest to 6771159 - ([8a58f8b](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/8a58f8b00c624a7df78b64dd015529c56d8387a9)) - Renovate Bot
