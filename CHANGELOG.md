@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.0.17](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/9e0d5995ed7b9c481314fc0ad02aa5a259b8b979..0.0.17) - 2026-08-05
+#### Miscellaneous Chores
+- (**deps**) update all dependencies - ([9e0d599](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/9e0d5995ed7b9c481314fc0ad02aa5a259b8b979)) - Renovate Bot
+
+- - -
+
 ## [0.0.16](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/8ec7bcf5df8edfba0d8a6b52d82f072549865222..0.0.16) - 2026-07-21
 #### Miscellaneous Chores
 - (**deps**) update https://code.forgejo.org/actions/checkout digest to fbc6f39 - ([8ec7bcf](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/8ec7bcf5df8edfba0d8a6b52d82f072549865222)) - Renovate Bot
