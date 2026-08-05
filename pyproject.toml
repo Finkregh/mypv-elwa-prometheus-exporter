@@ -1,6 +1,6 @@
 [project]
 name = "mypv-elwa-prometheus-exporter"
-version = "0.0.17"
+version = "0.0.18"
 description = "A Python script that exports my-PV AC ELWA device statistics as Prometheus metrics"
 readme = "README.md"
 license = { text = "MIT" }

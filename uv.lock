@@ -384,7 +384,7 @@ wheels = [
 
 [[package]]
 name = "mypv-elwa-prometheus-exporter"
-version = "0.0.17"
+version = "0.0.18"
 source = { editable = "." }
 dependencies = [
     { name = "prometheus-client" },
