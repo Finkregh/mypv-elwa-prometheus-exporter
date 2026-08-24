@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.0.22](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/2b07d0348f1c0b0fa57a90c120fd892804e25b1f..0.0.22) - 2026-08-24
+#### Miscellaneous Chores
+- (**deps**) update dependency ty to v0.0.74 - ([2b07d03](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/2b07d0348f1c0b0fa57a90c120fd892804e25b1f)) - Renovate Bot
+
+- - -
+
 ## [0.0.21](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/29b8dc6096ad6009fe9423b3ed3b5a894b6cc8cb..0.0.21) - 2026-08-19
 #### Miscellaneous Chores
 - (**deps**) update all dependencies - ([29b8dc6](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/29b8dc6096ad6009fe9423b3ed3b5a894b6cc8cb)) - Renovate Bot
