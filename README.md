@@ -41,6 +41,86 @@ Or build locally:
 docker build -t mypv-elwa-exporter .
 ```
 
+## Nix
+
+The repository is a flake and can be consumed directly, without Docker. The
+package is built from source with the same `uv_build` backend used by `pip` and
+`uv`; the test suite is hermetic (HTTP is mocked with `responses`) and runs as
+part of `nix build`.
+
+### Run / build
+
+```bash
+# Run straight from the repository (or a git ref)
+nix run .# -- serve --url http://192.168.178.125 --port 8000
+nix run git+https://git.h.oluflorenzen.de/finkregh/mypv-elwa-prometheus-exporter?ref=0.0.26 -- serve --url http://192.168.178.125
+
+# Build
+nix build .#            # -> result/bin/mypv-elwa-prometheus-exporter
+result/bin/mypv-elwa-prometheus-exporter serve --help
+```
+
+### Flake outputs
+
+| Output | Description |
+| --- | --- |
+| `packages.<system>.default` | The exporter (`<system>` is `x86_64-linux`, `aarch64-linux` or `aarch64-darwin`) |
+| `packages.<system>.mypv-elwa-prometheus-exporter` | Same package under its attribute name |
+| `overlays.default` | Adds `pkgs.mypv-elwa-prometheus-exporter` |
+| `nixosModules.default` | NixOS module (see below) |
+| `devShells.<system>.default` | Python, `uv`, `pytest`, `responses`, `black`, `mypy` |
+
+### Consuming from another flake
+
+```nix
+{
+  inputs.mypv-elwa-exporter = {
+    url = "git+https://git.h.oluflorenzen.de/finkregh/mypv-elwa-prometheus-exporter?ref=0.0.26";
+    # Recommended: reuse the consumer's nixpkgs instead of fetching a second one.
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+}
+```
+
+Then reference `inputs.mypv-elwa-exporter.packages.${system}.default`.
+`?ref=0.0.26` follows the git tag; use `?rev=<full-commit-sha>` for an immutable
+pin (`ref` can be moved, `rev` cannot). `flake.lock` in the consuming flake pins
+the resolved revision either way.
+
+The package needs no Python overrides: its runtime dependencies (`typer`,
+`requests`, `rich`, `prometheus-client`) are taken from the flake's `nixpkgs`.
+
+### NixOS module
+
+```nix
+{ inputs, ... }:
+{
+  imports = [ inputs.mypv-elwa-exporter.nixosModules.default ];
+
+  services.mypv-elwa-exporter = {
+    enable = true;
+    url = [ "http://192.168.178.125" ]; # one or more devices
+    port = 8000;                       # default
+    logLevel = "INFO";                 # default
+    # openFirewall = true;             # listens on 0.0.0.0; keep closed for local-only scraping
+  };
+}
+```
+
+The unit runs `mypv-elwa-prometheus-exporter serve` as a stateless `DynamicUser`
+and passes settings through the usual environment variables
+(`MYPVELWAEXPORTER_SERVE_URL`, `MYPVELWAEXPORTER_SERVE_PORT`,
+`MYPVELWAEXPORTER_SERVE_LOG_LEVEL`). Logs go to the journal. The exporter exits
+at startup when no configured device is reachable, so the unit uses
+`Restart=always`.
+
+### Development shell
+
+```bash
+nix develop
+uv run pytest
+```
+
 ## Usage
 
 ### Command Line
