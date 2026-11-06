@@ -138,7 +138,7 @@ jobs:
           fi
 
   build-container:
-    runs-on: ubuntu-latest
+    runs-on: dind
     needs: determine_versions
     env:
       DOCKER_HOST: tcp://docker_dind:2375
