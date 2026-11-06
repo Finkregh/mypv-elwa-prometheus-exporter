@@ -128,7 +128,7 @@ jobs:
           uv publish -v
 
   build-container:
-    runs-on: ubuntu-latest
+    runs-on: dind
     needs:
         - determine_versions
         - build
