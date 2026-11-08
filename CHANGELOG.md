@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.1.1](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/676a377a0af5a3da7e518c8e67acb905c2d812ae..0.1.1) - 2026-11-08
+#### Continuous Integration
+- run on dind runner - ([88e2159](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/88e215941cc8e29116b0582522836d08f941d2a5)) - finkregh
+- run on dind runner - ([881a210](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/881a2101be6ff65797ff208181178dad408887ad)) - finkregh
+#### Miscellaneous Chores
+- (**deps**) update all dependencies - ([da58f8c](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/da58f8cfaefe81be03f20f0fbb9c53b2407a0ea4)) - Renovate Bot
+- (**deps**) update dependency urllib3 to v2.8.0 [security] - ([1e21656](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/1e216560783c1e78ea9e8196af6689f16ebd1557)) - Renovate Bot
+- (**deps**) update dependency isort to v9 - ([676a377](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/676a377a0af5a3da7e518c8e67acb905c2d812ae)) - Renovate Bot
+
+- - -
+
 ## [0.1.0](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/19ec637c8ea4b23a4034a31c6a07dc2b3e6f9dfe..0.1.0) - 2026-10-24
 #### Features
 - (**packaging**) add nix flake - ([19ec637](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/19ec637c8ea4b23a4034a31c6a07dc2b3e6f9dfe)) - Oluf Lorenzen
