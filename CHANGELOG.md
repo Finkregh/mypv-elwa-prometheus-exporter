@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [0.1.5](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/3da68d7a6b05ba7793909b3ede8504a1e296055f..0.1.5) - 2026-11-12
+#### Miscellaneous Chores
+- (**deps**) update node:24-bookworm docker digest to 9d26675 - ([3da68d7](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/3da68d7a6b05ba7793909b3ede8504a1e296055f)) - Renovate Bot
+
+- - -
+
 ## [0.1.4](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/compare/8366f78f8f656924b6a9a26fc1c9023ea42c2992..0.1.4) - 2026-11-11
 #### Miscellaneous Chores
 - (**deps**) update all dependencies - ([8366f78](https://https://git.h.oluflorenzen.de/finkregh/mypv-ac-elwa-exporter/commit/8366f78f8f656924b6a9a26fc1c9023ea42c2992)) - Renovate Bot
